@@ -1,0 +1,7 @@
+streamlit
+folium
+streamlit-folium
+geopandas
+numpy
+pandas
+google-generativeai
