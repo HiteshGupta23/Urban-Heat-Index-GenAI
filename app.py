@@ -4,7 +4,7 @@ import folium
 from folium.plugins import MarkerCluster
 import geopandas as gpd
 import numpy as np
-import joblib
+import cloudpickle
 from google.generativeai import GenerativeModel
 import plotly.graph_objects as go
 import requests
@@ -30,7 +30,7 @@ if lottie_uhi:
 # ----------------------
 # 2. Introduction
 # ----------------------
-with st.expander("📘 What is the Urban Heat Island Effect?"):
+with st.markdown("📘 What is the Urban Heat Island Effect?"):
     st.markdown("""
     The **Urban Heat Island (UHI)** effect refers to the observed phenomenon where urban or metropolitan areas experience significantly warmer temperatures than nearby rural areas.
 
@@ -51,8 +51,11 @@ with st.expander("📘 What is the Urban Heat Island Effect?"):
 # ----------------------
 # 3. Load ML Model & Scaler
 # ----------------------
-rf_model = joblib.load("random_forest_model.pkl")
-scaler = joblib.load("scaler.pkl")
+with open("random_forest_model.pkl", "rb") as f:
+    rf_model = cloudpickle.load(f)
+
+with open("scaler.pkl", "rb") as f:
+    scaler = cloudpickle.load(f)
 
 # ----------------------
 # 4. Input Section
