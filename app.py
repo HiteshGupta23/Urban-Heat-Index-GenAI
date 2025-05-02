@@ -5,6 +5,7 @@ from folium.plugins import MarkerCluster
 import geopandas as gpd
 import numpy as np
 import cloudpickle
+import joblib
 from google.generativeai import GenerativeModel
 import plotly.graph_objects as go
 import requests
