@@ -52,8 +52,14 @@ with st.markdown("📘 What is the Urban Heat Island Effect?"):
 # ----------------------
 # 3. Load ML Model & Scaler
 # ----------------------
-rf_model = joblib.load("random_forest_model.pkl")
-scaler = joblib.load("scaler.pkl")
+#rf_model = joblib.load("random_forest_model.pkl")
+#scaler = joblib.load("scaler.pkl")
+
+with open("random_forest_model.pkl", "rb") as f:
+    rf_model = cloudpickle.load(f)
+
+with open("scaler.pkl", "rb") as f:
+    scaler = cloudpickle.load(f)
 
 # ----------------------
 # 4. Input Section
