@@ -12,6 +12,9 @@ import requests
 import plotly.express as px
 from streamlit_lottie import st_lottie
 
+import sys
+st.sidebar.markdown(f"**Python version:** `{sys.version}`")
+
 # -------------------------------
 # 1. Page Configuration & Lottie
 # -------------------------------
