@@ -24,7 +24,7 @@ def load_lottie_url(url):
         return None
     return r.json()
 
-lottie_uhi = load_lottie_url("https://lottie.host/f0df5e40-7c0c-46f3-8b34-03c35321cb19/yayByXmDRz.json")
+lottie_uhi = load_lottie_url("https://lottie.host/9127917d-2d06-4dde-8586-5f8f2dab49fe/m8iGgfp9D1.json")
 if lottie_uhi:
     st_lottie(lottie_uhi, height=250, key="uhi_anim")
 
