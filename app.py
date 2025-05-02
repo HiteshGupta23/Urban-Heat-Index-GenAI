@@ -12,9 +12,6 @@ import requests
 import plotly.express as px
 from streamlit_lottie import st_lottie
 
-import sys
-st.sidebar.markdown(f"**Python version:** `{sys.version}`")
-
 # -------------------------------
 # 1. Page Configuration & Lottie
 # -------------------------------
@@ -27,7 +24,7 @@ def load_lottie_url(url):
         return None
     return r.json()
 
-lottie_uhi = load_lottie_url("https://assets1.lottiefiles.com/packages/lf20_0fhlytwe.json")
+lottie_uhi = load_lottie_url("https://lottie.host/f0df5e40-7c0c-46f3-8b34-03c35321cb19/yayByXmDRz.json")
 if lottie_uhi:
     st_lottie(lottie_uhi, height=250, key="uhi_anim")
 
